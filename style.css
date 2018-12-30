@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900&subset=cyrillic");
+.templates {
+    display: none !important;
+}
+.widget {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+}
+
+.i-note {
+    display: inline-block;
+}
+.i-note__el {
+    stroke: #000;
+    fill: none;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 3;
+}
+
+.c-notes {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 10px;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.5);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.c-notes__spin-container {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.c-notes__section {
+    box-sizing: border-box;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.c-notes__header {
+    display: flex;
+    align-items: center;
+    background-color: #004c8b;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 20px;
+}
+.c-notes__h {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.c-notes__icon {
+    display: inline-block;
+}
+.c-notes__text {
+    background-color: #0277bc;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.6em;
+}
+.c-notes__button {
+    background-color: #58a5ef;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+.c-notes__button:hover .c-notes__button-inner,
+.c-notes__button:focus .c-notes__button-inner {
+    background-color: rgba(0,76,139,0.5);
+}
+.c-notes__button-inner {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.c-notes__icon {
+    background-color: #0277bc;
+    padding: 10px;
+    border-radius: 100%;
+}
+.c-notes .i-note {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+.c-notes .i-note__el {
+    stroke: #fff;
+}

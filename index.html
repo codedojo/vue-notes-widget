@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet"  type="text/css" />
+    <title>Виджет "Интересные заметки"</title>
+</head>
+<body>
+    <div class="widget">
+        <div id="app-notes">
+            <c-notes></c-notes><!-- Компонент нашего виджета -->
+        </div>
+    </div>
+
+    <div class="templates">
+        <!-- Шаблоны для компонентов -->
+        <template id="c-notes">
+            <article class="c-notes">
+                <div class="c-notes__spin-container" ref="spinContainer" v-show="!isLoad"></div>
+                <header class="c-notes__header c-notes__section">
+                    <div class="c-notes__icon"><i-note class="_theme_light" /></div>
+                    <h3 class="c-notes__h">Интересные заметки</h3>
+                </header>
+                <p class="c-notes__text c-notes__section">{{noteText}}</p>
+                <div
+                    class="c-notes__button c-notes__section"
+                    tabindex="0"
+                    role="button"
+                    @click="onNextNote"
+                    @keyup.enter="onNextNote"
+                >
+                    <span class="c-notes__button-inner">
+                        Еще заметка
+                    </span>
+                </div>
+            </article>
+        </template>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
