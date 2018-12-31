@@ -63,7 +63,7 @@ Vue.component('c-notes', {
     computed: {
         noteText() {return this.currentNote.text;}
     },
-    mounted() {
+    mounted: function() {
         // Создаём предзагрузчик
         var spin = new Spinner().spin();
         this.$refs.spinContainer.appendChild(spin.el);
@@ -82,9 +82,9 @@ Vue.component('c-notes', {
     },
     methods: {
         // Метод, для генерации следующей заметки
-        onNextNote() {this.currentNote = this.getRandomNote();},
+        onNextNote: function() {this.currentNote = this.getRandomNote();},
         // Получем рандомную заметку
-        getRandomNote() {
+        getRandomNote: function() {
             // Если массив в заметками закончился, то записываем в него копию исходного массива
             if (this.notes.length === 0) {
                 this.notes = this.dubleNotes.slice();
@@ -93,7 +93,7 @@ Vue.component('c-notes', {
             return this.notes.splice(this.randomIndex(), 1)[0];
         },
         // Возвращаем рандомный индекс из массива заметок
-        randomIndex() {
+        randomIndex: function() {
             var min = 0,
                 max = this.notes.length - 1,
                 rand = min + Math.random() * (max + 1 - min);
